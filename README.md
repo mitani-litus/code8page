@@ -1,6 +1,14 @@
-# [Start Bootstrap - Agency](https://startbootstrap.com/theme/agency)
+Sorry, This project is Japanese Only.
 
-[Agency](https://startbootstrap.com/theme/agency) is a one page, agency portfolio theme built with [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid, modal windows for each portfolio item, and a working PHP based contact form.
+# Code for Hachioji Official Sites
+
+Code for Hachiojiの公式ホームページ用リポジトリです。
+Githubの静的ホスティング機能で公開していく想定です。
+
+
+# Special Thanks [Start Bootstrap - Agency](https://startbootstrap.com/theme/agency)
+
+このリポジトリは、Bootstrapを前提とした [Agency](https://startbootstrap.com/theme/agency) をフォークして利用しています。
 
 ## Preview
 
