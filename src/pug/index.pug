@@ -8,10 +8,10 @@ html(lang='ja')
         meta(name='description', content='')
         meta(name='author', content='')
 
-        title エージェンシー - Start Bootstrapのテーマ
+        title Code for Hachioji オフィシャルページ
 
         // Favicon
-        link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
+        link(rel='icon', type='image/svg+xml', href='assets/favicon.svg')
 
         // Font Awesome icons (free version)
         script(src='https://use.fontawesome.com/releases/v6.3.0/js/all.js', crossorigin='anonymous')
@@ -36,9 +36,9 @@ html(lang='ja')
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.text-uppercase.ms-auto.py-4.py-lg-0
                         li.nav-item
-                            a.nav-link(href='#services') サービス
+                            a.nav-link(href='#services') コンセプト
                         li.nav-item
-                            a.nav-link(href='#portfolio') ポートフォリオ
+                            a.nav-link(href='#portfolio') 制作物等
                         li.nav-item
                             a.nav-link(href='#about') 概要
                         li.nav-item
@@ -48,45 +48,50 @@ html(lang='ja')
         // Masthead
         header.masthead
             .container
-                .masthead-subheading 私たちのスタジオへようこそ！
-                .masthead-heading.text-uppercase お会いできて光栄です
-                a.btn.btn-primary.btn-xl.text-uppercase(href='#services') 詳しくはこちら
+                .masthead-subheading テクノロジーで八王子をより良くする
+                .masthead-heading.text-uppercase Code for Hachioji
+                p.text-white-50.mt-3
+                    | 私たちは、オープンデータやIT技術を活用し、
+                    | 市民・行政・企業と共に八王子の課題解決に取り組むコミュニティです。
+                a.btn.btn-primary.btn-xl.text-uppercase(href='#services') 私たちの活動
 
-        // Services
+
+        // services
         section#services.page-section
             .container
                 .text-center
-                    h2.section-heading.text-uppercase サービス
-                    h3.section-subheading.text-muted ここにテキストが入ります。
+                    h2.section-heading.text-uppercase Concept / Mission
+                    h3.section-subheading.text-muted なぜ私たちは活動しているのか
                 .row.text-center
                     .col-md-4
                         span.fa-stack.fa-4x
                             i.fas.fa-circle.fa-stack-2x.text-primary
-                            i.fas.fa-shopping-cart.fa-stack-1x.fa-inverse
-                        h4.my-3 Eコマース
+                            i.fas.fa-city.fa-stack-1x.fa-inverse
+                        h4.my-3 地域課題の解決
                         p.text-muted
-                            | ここにテキストが入ります。
+                            | テクノロジーを使い、八王子の地域課題を「自分ごと」として解決します。
                     .col-md-4
                         span.fa-stack.fa-4x
                             i.fas.fa-circle.fa-stack-2x.text-primary
-                            i.fas.fa-laptop.fa-stack-1x.fa-inverse
-                        h4.my-3 レスポンシブデザイン
+                            i.fas.fa-code.fa-stack-1x.fa-inverse
+                        h4.my-3 オープンな開発
                         p.text-muted
-                            | ここにテキストが入ります。
+                            | エンジニアだけでなく、誰でも参加できるオープンな活動を目指します。
                     .col-md-4
                         span.fa-stack.fa-4x
                             i.fas.fa-circle.fa-stack-2x.text-primary
-                            i.fas.fa-lock.fa-stack-1x.fa-inverse
-                        h4.my-3 ウェブセキュリティ
+                            i.fas.fa-users.fa-stack-1x.fa-inverse
+                        h4.my-3 コミュニティ
                         p.text-muted
-                            | ここにテキストが入ります。
+                            | 行政・市民・企業をつなぐハブとして活動します。
+
 
         // Portfolio Grid
         section#portfolio.page-section.bg-light
             .container
                 .text-center
-                    h2.section-heading.text-uppercase ポートフォリオ
-                    h3.section-subheading.text-muted ここにテキストが入ります。
+                    h2.section-heading.text-uppercase Projects
+                    h3.section-subheading.text-muted これまで・現在進行中のプロジェクト
                 .row
                     .col-lg-4.col-sm-6.mb-4
                         // Portfolio item 1
@@ -97,8 +102,9 @@ html(lang='ja')
                                         i.fas.fa-plus.fa-3x
                                 img.img-fluid(src='assets/img/portfolio/1.jpg', alt='...')
                             .portfolio-caption
-                                .portfolio-caption-heading スレッド
-                                .portfolio-caption-subheading.text-muted イラスト
+                                .portfolio-caption-heading スタンプラリーアプリ
+                                .portfolio-caption-subheading.text-muted
+                                    | アプリ無しでブラウザだけで動作するアプリ
                     .col-lg-4.col-sm-6.mb-4
                         // Portfolio item 2
                         .portfolio-item
@@ -108,8 +114,8 @@ html(lang='ja')
                                         i.fas.fa-plus.fa-3x
                                 img.img-fluid(src='assets/img/portfolio/2.jpg', alt='...')
                             .portfolio-caption
-                                .portfolio-caption-heading 探検
-                                .portfolio-caption-subheading.text-muted グラフィックデザイン
+                                .portfolio-caption-heading Cooming Soon
+                                .portfolio-caption-subheading.text-muted Cooming Soon
                     .col-lg-4.col-sm-6.mb-4
                         // Portfolio item 3
                         .portfolio-item
@@ -119,8 +125,8 @@ html(lang='ja')
                                         i.fas.fa-plus.fa-3x
                                 img.img-fluid(src='assets/img/portfolio/3.jpg', alt='...')
                             .portfolio-caption
-                                .portfolio-caption-heading 完成
-                                .portfolio-caption-subheading.text-muted アイデンティティ
+                                .portfolio-caption-heading Cooming Soon
+                                .portfolio-caption-subheading.text-muted Cooming Soon
                     .col-lg-4.col-sm-6.mb-4.mb-lg-0
                         // Portfolio item 4
                         .portfolio-item
@@ -130,8 +136,8 @@ html(lang='ja')
                                         i.fas.fa-plus.fa-3x
                                 img.img-fluid(src='assets/img/portfolio/4.jpg', alt='...')
                             .portfolio-caption
-                                .portfolio-caption-heading ライン
-                                .portfolio-caption-subheading.text-muted ブランディング
+                                .portfolio-caption-heading Cooming Soon
+                                .portfolio-caption-subheading.text-muted Cooming Soon
                     .col-lg-4.col-sm-6.mb-4.mb-sm-0
                         // Portfolio item 5
                         .portfolio-item
@@ -141,8 +147,8 @@ html(lang='ja')
                                         i.fas.fa-plus.fa-3x
                                 img.img-fluid(src='assets/img/portfolio/5.jpg', alt='...')
                             .portfolio-caption
-                                .portfolio-caption-heading 南西
-                                .portfolio-caption-subheading.text-muted ウェブサイトデザイン
+                                .portfolio-caption-heading Cooming Soon
+                                .portfolio-caption-subheading.text-muted Cooming Soon
                     .col-lg-4.col-sm-6
                         // Portfolio item 6
                         .portfolio-item
@@ -152,133 +158,161 @@ html(lang='ja')
                                         i.fas.fa-plus.fa-3x
                                 img.img-fluid(src='assets/img/portfolio/6.jpg', alt='...')
                             .portfolio-caption
-                                .portfolio-caption-heading 窓
-                                .portfolio-caption-subheading.text-muted 写真
+                                .portfolio-caption-heading Cooming Soon
+                                .portfolio-caption-subheading.text-muted Cooming Soon
+// About
+section#about.page-section
+    .container
+        .text-center
+            h2.section-heading.text-uppercase History
+            h3.section-subheading.text-muted 2014年の設立から現在まで
+        ul.timeline
+            li
+                .timeline-image
+                    img.rounded-circle.img-fluid(src='assets/img/about/1.jpg', alt='Code for Hachioji 設立')
+                .timeline-panel
+                    .timeline-heading
+                        h4 2014年
+                        h4.subheading Code for Hachioji 設立
+                    .timeline-body
+                        p.text-muted
+                            | 市民エンジニアを中心に活動を開始。
+                            | コワーキングスペース「八王子8Beat」を拠点にコミュニティを形成しました。
 
-        // About
-        section#about.page-section
-            .container
-                .text-center
-                    h2.section-heading.text-uppercase 概要
-                    h3.section-subheading.text-muted ここにテキストが入ります。
-                ul.timeline
-                    li
-                        .timeline-image
-                            img.rounded-circle.img-fluid(src='assets/img/about/1.jpg', alt='...')
-                        .timeline-panel
-                            .timeline-heading
-                                h4 2009-2011
-                                h4.subheading 私たちのささやかな始まり
-                            .timeline-body
-                                p.text-muted
-                                    | ここにテキストが入ります。
-                    li.timeline-inverted
-                        .timeline-image
-                            img.rounded-circle.img-fluid(src='assets/img/about/2.jpg', alt='...')
-                        .timeline-panel
-                            .timeline-heading
-                                h4 2011年3月
-                                h4.subheading エージェンシーの誕生
-                            .timeline-body
-                                p.text-muted
-                                    | ここにテキストが入ります。
-                    li
-                        .timeline-image
-                            img.rounded-circle.img-fluid(src='assets/img/about/3.jpg', alt='...')
-                        .timeline-panel
-                            .timeline-heading
-                                h4 2015年12月
-                                h4.subheading フルサービスへの移行
-                            .timeline-body
-                                p.text-muted
-                                    | ここにテキストが入ります。
-                    li.timeline-inverted
-                        .timeline-image
-                            img.rounded-circle.img-fluid(src='assets/img/about/4.jpg', alt='...')
-                        .timeline-panel
-                            .timeline-heading
-                                h4 2020年7月
-                                h4.subheading フェーズ2の拡大
-                            .timeline-body
-                                p.text-muted
-                                    | ここにテキストが入ります。
-                    li.timeline-inverted
-                        .timeline-image
-                            h4
-                                | 私たちの
-                                br
-                                | 物語に
-                                br
-                                | 参加しよう！
+            li.timeline-inverted
+                .timeline-image
+                    img.rounded-circle.img-fluid(src='assets/img/about/2.jpg', alt='Healthcare Hackathon')
+                .timeline-panel
+                    .timeline-heading
+                        h4 2014年12月
+                        h4.subheading Healthcare Hackathon in Hachioji 主催
+                    .timeline-body
+                        p.text-muted
+                            | 「生活習慣病」をテーマにしたアイディアソンを開催。
+                            | 専門家の講演とワークショップを通じて、多様な視点から課題を議論しました。
+
+            li
+                .timeline-image
+                    img.rounded-circle.img-fluid(src='assets/img/about/3.jpg', alt='IODD2015')
+                .timeline-panel
+                    .timeline-heading
+                        h4 2015年2月
+                        h4.subheading IODD2015 in 八王子 開催
+                    .timeline-body
+                        p.text-muted
+                            | 八王子の文化や歴史をデータで捉え、
+                            | これからの八王子を参加者と共に考えるイベントを実施しました。
+
+            li.timeline-inverted
+                .timeline-image
+                    img.rounded-circle.img-fluid(src='assets/img/about/3.jpg', alt='オープンデータ・ラボ')
+                .timeline-panel
+                    .timeline-heading
+                        h4 2015年4月
+                        h4.subheading 東京工科大学内にオープンデータ・ラボ設置
+                    .timeline-body
+                        p.text-muted
+                            | Code for Hachioji メンバーの竹田教授により、
+                            | オープンデータを活用した教育・研究拠点が設置されました。
+
+            li
+                .timeline-image
+                    img.rounded-circle.img-fluid(src='assets/img/about/3.jpg', alt='IODD2016')
+                .timeline-panel
+                    .timeline-heading
+                        h4 2016年3月
+                        h4.subheading IODD2016 in 八王子 開催
+                    .timeline-body
+                        p.text-muted
+                            | 高尾山ビーコンプロジェクトに向けた準備として、
+                            | ビーコン設置のための地図作成を行いました。
+
+            li.timeline-inverted
+                .timeline-image
+                    img.rounded-circle.img-fluid(src='assets/img/about/2.jpg', alt='オープンデータ推進事業')
+                .timeline-panel
+                    .timeline-heading
+                        h4 2017年4月 – 2020年3月
+                        h4.subheading 南多摩5市 オープンデータ利活用推進事業
+                    .timeline-body
+                        p.text-muted
+                            | 八王子市を含む南多摩5市と連携し、
+                            | 行政が整備すべき最低限のデータセット定義に取り組みました。
+
+            li
+                .timeline-image
+                    img.rounded-circle.img-fluid(src='assets/img/about/4.jpg', alt='ITスタンプラリー')
+                .timeline-panel
+                    .timeline-heading
+                        h4 2026年2月
+                        h4.subheading 消費者フェスティバル八王子2026 協賛
+                    .timeline-body
+                        p.text-muted
+                            | アプリレスで動作するWebスタンプラリーを開発し、
+                            | イベント運営を技術面から支援しました。
+
+            li.timeline-inverted
+                .timeline-image
+                    h4
+                        | 私たちの
+                        br
+                        | 物語に
+                        br
+                        | 参加しよう！
+
 
         // Team
         section#team.page-section.bg-light
             .container
                 .text-center
-                    h2.section-heading.text-uppercase 私たちの素晴らしいチーム
-                    h3.section-subheading.text-muted ここにテキストが入ります。
-                .row
-                    .col-lg-4
-                        .team-member
-                            img.mx-auto.rounded-circle(src='assets/img/team/1.jpg', alt='...')
-                            h4 Parveen Anand
-                            p.text-muted リードデザイナー
-                            a.btn.btn-dark.btn-social.mx-2(href='#!', aria-label='Parveen Anand Twitter Profile')
-                                i.fab.fa-twitter
-                            a.btn.btn-dark.btn-social.mx-2(href='#!', aria-label='Parveen Anand Facebook Profile')
-                                i.fab.fa-facebook-f
-                            a.btn.btn-dark.btn-social.mx-2(href='#!', aria-label='Parveen Anand LinkedIn Profile')
-                                i.fab.fa-linkedin-in
-                    .col-lg-4
-                        .team-member
-                            img.mx-auto.rounded-circle(src='assets/img/team/2.jpg', alt='...')
-                            h4 Diana Petersen
-                            p.text-muted リードマーケター
-                            a.btn.btn-dark.btn-social.mx-2(href='#!', aria-label='Diana Petersen Twitter Profile')
-                                i.fab.fa-twitter
-                            a.btn.btn-dark.btn-social.mx-2(href='#!', aria-label='Diana Petersen Facebook Profile')
-                                i.fab.fa-facebook-f
-                            a.btn.btn-dark.btn-social.mx-2(href='#!', aria-label='Diana Petersen LinkedIn Profile')
-                                i.fab.fa-linkedin-in
-                    .col-lg-4
-                        .team-member
-                            img.mx-auto.rounded-circle(src='assets/img/team/3.jpg', alt='...')
-                            h4 Larry Parker
-                            p.text-muted リードデベロッパー
-                            a.btn.btn-dark.btn-social.mx-2(href='#!', aria-label='Larry Parker Twitter Profile')
-                                i.fab.fa-twitter
-                            a.btn.btn-dark.btn-social.mx-2(href='#!', aria-label='Larry Parker Facebook Profile')
-                                i.fab.fa-facebook-f
-                            a.btn.btn-dark.btn-social.mx-2(href='#!', aria-label='Larry Parker LinkedIn Profile')
-                                i.fab.fa-linkedin-in
-                .row
-                    .col-lg-8.mx-auto.text-center
-                        p.large.text-muted
-                            | ここにテキストが入ります。
+                    h2.section-heading.text-uppercase Join Us
+                    h3.section-subheading.text-muted 誰でも参加できます
+.row
+    .col-lg-4
+        .team-member
+            i.fas.fa-laptop-code.fa-4x.mb-3.text-primary
+            h4 エンジニア
+            p.text-muted
+                | Web / アプリ / データ分析など
+    .col-lg-4
+        .team-member
+            i.fas.fa-pencil-alt.fa-4x.mb-3.text-primary
+            h4 非エンジニア
+            p.text-muted
+                | 企画・デザイン・文章・運営など
+    .col-lg-4
+        .team-member
+            i.fas.fa-comments.fa-4x.mb-3.text-primary
+            h4 コミュニティ参加
+            p.text-muted
+                | Facebookでや定例会の開催案内をお送りしています。気軽に参加ください！
+            a.text-muted(href="https://www.facebook.com/code4hachioji") 
 
-        // Clients
-        div.py-5
-            .container
-                .row.align-items-center
-                    .col-md-3.col-sm-6.my-3
-                        a(href='#!')
-                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/microsoft.svg', alt='...', aria-label='Microsoft Logo')
-                    .col-md-3.col-sm-6.my-3
-                        a(href='#!')
-                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/google.svg', alt='...', aria-label='Google Logo')
-                    .col-md-3.col-sm-6.my-3
-                        a(href='#!')
-                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/facebook.svg', alt='...', aria-label='Facebook Logo')
-                    .col-md-3.col-sm-6.my-3
-                        a(href='#!')
-                            img.img-fluid.img-brand.d-block.mx-auto(src='assets/img/logos/ibm.svg', alt='...', aria-label='IBM Logo')
+// Open Data
+section#opendata.page-section
+    .container
+        .text-center
+            h2.section-heading.text-uppercase Open Data
+            h3.section-subheading.text-muted 八王子市のデータ活用
+        .row
+            .col-md-6
+                h4 データセット
+                ul.list-unstyled
+                    li
+                        a(href='https://www.city.hachioji.tokyo.jp/contents/open/index.html')
+                            | 八王子市オープンデータポータル
+            .col-md-6
+                h4 活用事例
+                p.text-muted
+                    | アプリ開発や可視化プロジェクトで活用しています。
+
 
         // Contact
         section#contact.page-section
             .container
                 .text-center
                     h2.section-heading.text-uppercase お問い合わせ
-                    h3.section-subheading.text-muted ここにテキストが入ります。
+                    h3.section-subheading.text-muted 活動に関するお問い合わせやご相談等お送りください。
 
                 // * * * * * * * * * * * * * * *
                 // * * SB Forms Contact Form * *
@@ -315,17 +349,6 @@ html(lang='ja')
                                     | メールアドレスは必須です。
                                 .invalid-feedback(data-sb-feedback='email:email')
                                     | メールアドレスが正しくありません。
-
-                            .form-group.mb-md-0
-
-                                // Phone number input
-                                input#phone.form-control(
-                                    type='tel',
-                                    placeholder='電話番号 *',
-                                    data-sb-validations='required'
-                                )
-                                .invalid-feedback(data-sb-feedback='phone:required')
-                                    | 電話番号は必須です。
 
                         .col-md-6
                             .form-group.form-group-textarea.mb-md-0
