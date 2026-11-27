@@ -314,16 +314,11 @@ section#opendata.page-section
                     h2.section-heading.text-uppercase お問い合わせ
                     h3.section-subheading.text-muted 活動に関するお問い合わせやご相談等お送りください。
 
-                // * * * * * * * * * * * * * * *
-                // * * SB Forms Contact Form * *
-                // * * * * * * * * * * * * * * *
-
-                // This form is pre-integrated with SB Forms.
-                // To make this form functional, sign up at
-                // https://startbootstrap.com/solution/contact-forms
-                // to get an API token!
-
-                form#contactForm(data-sb-form-api-token='API_TOKEN')
+                // お問い合わせフォーム（Formspree 経由で送信）
+                // 送信先は action の URL で指定します。
+                // https://formspree.io でフォームを作成し、発行された ID（例: xyzabcd）で
+                // 「FORMSPREE_FORM_ID」を置き換えてください。
+                form#contactForm(action='https://formspree.io/f/xyewvvpg', method='POST', novalidate)
                     .row.align-items-stretch.mb-5
                         .col-md-6
                             .form-group
@@ -331,10 +326,12 @@ section#opendata.page-section
                                 // Name input
                                 input#name.form-control(
                                     type='text',
+                                    name='name',
                                     placeholder='お名前 *',
-                                    data-sb-validations='required'
+                                    autocomplete='name',
+                                    required
                                 )
-                                .invalid-feedback(data-sb-feedback='name:required')
+                                .invalid-feedback
                                     | 名前は必須です。
 
                             .form-group
@@ -342,48 +339,42 @@ section#opendata.page-section
                                 // Email address input
                                 input#email.form-control(
                                     type='email',
+                                    name='email',
                                     placeholder='メールアドレス *',
-                                    data-sb-validations='required,email'
+                                    autocomplete='email',
+                                    required
                                 )
-                                .invalid-feedback(data-sb-feedback='email:required')
-                                    | メールアドレスは必須です。
-                                .invalid-feedback(data-sb-feedback='email:email')
-                                    | メールアドレスが正しくありません。
+                                .invalid-feedback
+                                    | 正しいメールアドレスを入力してください。
 
                         .col-md-6
                             .form-group.form-group-textarea.mb-md-0
 
                                 // Message input
                                 textarea#message.form-control(
+                                    name='message',
                                     placeholder='メッセージ *',
-                                    data-sb-validations='required'
+                                    required
                                 )
-                                .invalid-feedback(data-sb-feedback='message:required')
+                                .invalid-feedback
                                     | メッセージは必須です。
 
-                    // Submit success message
-                    //
-                    // This is what your users will see when the form
-                    // has successfully submitted
+                    // スパム対策（人間には見えない入力欄。入力があると Formspree が破棄します）
+                    input(type='text', name='_gotcha', tabindex='-1', autocomplete='off', style='display:none')
 
-                    #submitSuccessMessage.d-none
+                    // Submit success message
+                    #submitSuccessMessage.d-none(role='status')
                         .text-center.text-white.mb-3
-                            .fw-bolder フォームの送信に成功しました！
-                            | このフォームを有効にするには、以下でサインアップしてください
-                            br
-                            a(href='https://startbootstrap.com/solution/contact-forms') https://startbootstrap.com/solution/contact-forms
+                            .fw-bolder お問い合わせを送信しました。
+                            | 内容を確認のうえ、ご連絡いたします。
 
                     // Submit error message
-                    //
-                    // This is what your users will see when there is
-                    // an error submitting the form
-
-                    #submitErrorMessage.d-none
-                        .text-center.text-danger.mb-3 メッセージの送信中にエラーが発生しました！
+                    #submitErrorMessage.d-none(role='alert')
+                        .text-center.text-danger.mb-3 メッセージの送信中にエラーが発生しました。時間をおいて再度お試しください。
 
                     // Submit Button
                     .text-center
-                        button#submitButton.btn.btn-primary.btn-xl.text-uppercase.disabled(type='submit') メッセージを送信
+                        button#submitButton.btn.btn-primary.btn-xl.text-uppercase(type='submit') メッセージを送信
 
         // Footer
         footer.footer.py-4
@@ -415,10 +406,3 @@ section#opendata.page-section
 
         // Core theme JS
         script(src='js/scripts.js')
-
-        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-        // * *                               SB Forms JS                               * *
-        // * * Activate your form at https://startbootstrap.com/solution/contact-forms * *
-        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-
-        script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')

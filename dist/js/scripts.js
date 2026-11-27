@@ -51,4 +51,57 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Contact form (Formspree)
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        const submitButton = document.getElementById('submitButton');
+        const successMessage = document.getElementById('submitSuccessMessage');
+        const errorMessage = document.getElementById('submitErrorMessage');
+
+        const showMessage = function (target) {
+            successMessage.classList.add('d-none');
+            errorMessage.classList.add('d-none');
+            if (target) {
+                target.classList.remove('d-none');
+            }
+        };
+
+        contactForm.addEventListener('submit', async function (event) {
+            event.preventDefault();
+            showMessage(null);
+
+            if (!contactForm.checkValidity()) {
+                contactForm.classList.add('was-validated');
+                return;
+            }
+
+            // フォームIDが未設定のままなら送信しない（以前のように「成功」と誤表示しない）
+            if (contactForm.action.indexOf('FORMSPREE_FORM_ID') !== -1) {
+                console.error('Formspree のフォームIDが設定されていません。src/pug/index.pug を確認してください。');
+                showMessage(errorMessage);
+                return;
+            }
+
+            submitButton.disabled = true;
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: { 'Accept': 'application/json' },
+                });
+                if (!response.ok) {
+                    throw new Error('HTTP ' + response.status);
+                }
+                contactForm.reset();
+                contactForm.classList.remove('was-validated');
+                showMessage(successMessage);
+            } catch (error) {
+                console.error(error);
+                showMessage(errorMessage);
+            } finally {
+                submitButton.disabled = false;
+            }
+        });
+    }
+
 });
