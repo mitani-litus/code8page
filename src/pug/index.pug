@@ -380,18 +380,12 @@ section#opendata.page-section
         footer.footer.py-4
             .container
                 .row.align-items-center
-                    .col-lg-4.text-lg-start
-                        | Copyright &copy; あなたのウェブサイト 2023
-                    .col-lg-4.my-3.my-lg-0
-                        a.btn.btn-dark.btn-social.mx-2(href='#!', aria-label='Twitter')
-                            i.fab.fa-twitter
-                        a.btn.btn-dark.btn-social.mx-2(href='#!', aria-label='Facebook')
+                    .col-lg-6.text-lg-start.mb-3.mb-lg-0
+                        // 西暦はビルド時に自動で入ります
+                        | Copyright &copy; Code for Hachioji #{new Date().getFullYear()}
+                    .col-lg-6.text-lg-end
+                        a.btn.btn-dark.btn-social.mx-2(href='https://www.facebook.com/code4hachioji', target='_blank', rel='noopener', aria-label='Facebook')
                             i.fab.fa-facebook-f
-                        a.btn.btn-dark.btn-social.mx-2(href='#!', aria-label='LinkedIn')
-                            i.fab.fa-linkedin-in
-                    .col-lg-4.text-lg-end
-                        a.link-dark.text-decoration-none.me-3(href='#!') プライバシーポリシー
-                        a.link-dark.text-decoration-none(href='#!') 利用規約
 
         // Portfolio Modals
         include includes/portfolio-modal-1
